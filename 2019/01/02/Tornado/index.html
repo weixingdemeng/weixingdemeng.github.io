@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Django / Flask/Tornado安装pip check - 检查是否冲突pip freeze - 检查依赖库版本pip installpip install django==1.11 - 更换版本python -m pip install -U pip – 更新pip 1.通过PyCharm创建项目 –&amp;gt; hellodjango2..在Terminal的虚拟环境中安装依赖项 –&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/01/02/Tornado/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Django / Flask/Tornado安装pip check - 检查是否冲突pip freeze - 检查依赖库版本pip installpip install django==1.11 - 更换版本python -m pip install -U pip – 更新pip 1.通过PyCharm创建项目 –&amp;gt; hellodjango2..在Terminal的虚拟环境中安装依赖项 –&amp;">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-29T03:53:56.600Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Django / Flask/Tornado安装pip check - 检查是否冲突pip freeze - 检查依赖库版本pip installpip install django==1.11 - 更换版本python -m pip install -U pip – 更新pip 1.通过PyCharm创建项目 –&amp;gt; hellodjango2..在Terminal的虚拟环境中安装依赖项 –&amp;">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Tornado" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/02/Tornado/" class="article-date">
+  <time datetime="2019-01-02T13:08:22.883Z" itemprop="datePublished">2019-01-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Django-Flask-Tornado"><a href="#Django-Flask-Tornado" class="headerlink" title="Django / Flask/Tornado"></a>Django / Flask/Tornado</h1><p>安装<br>pip check - 检查是否冲突<br>pip freeze - 检查依赖库版本<br>pip install<br>pip install django==1.11 - 更换版本<br>python -m pip install -U pip – 更新pip</p>
+<p>1.通过PyCharm创建项目 –&gt; hellodjango<br>2..在Terminal的虚拟环境中安装依赖项 –&gt;  install django pymysql django-redis djangorestframework pillow<br>pip check - 重建依赖库<br>pip freeze &gt; requirements.txt - 依赖库导出<br>3.创建Django项目 –&gt;django-admin startproject hellodjango . – 点表示当前路径<br>4.运行项目 –&gt; python manage.py runserver - 启动服务器<br><a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a><br><a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a><br>python manage.py runserver 0.0.0.0:8000<br>5.修改配置文件 –&gt; hellodjango/settings.py<br>LANGUAGE_CODE = ‘zh-hans’ - 语言设置<br>TIME_ZONE = ‘Asia/Chongqing’ - 时区设置<br>DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>        ‘NAME’: ‘HRS’,<br>        ‘HOST’: ‘47.112.10.147’,<br>        ‘PORT’: 3306,<br>        ‘USER’: ‘root’,<br>        ‘PASSWORD’: ‘123456’,<br>        ‘TIME_ZONE’: ‘Asia/Chongqing’<br>    }<br>}<br>6.修改<strong>init</strong>.py文件 –&gt;<br>import pymysql<br>pymysql.install_as_MySQLdb()<br>7.生成Django自带的数据表<br>python manage.py migrate - 在数据库增加10个表格<br>8.创建后台管理账号<br>python manage.py createsuperuser</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/02/Tornado/" data-id="cjqf7vgf000013kve0csblpc0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/基础知识/">基础知识</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/基础知识/python/">python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/指令/">指令</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/指令/Nginx常用指令/">Nginx常用指令</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/指令/git基本指令/">git基本指令</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/02/Tornado/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/Nginx服务器安装/">Nginx常用指令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/git常用指令/">git常用指令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/22/python练习/">python基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
