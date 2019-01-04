@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="#Django虚拟环境的搭建 C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\; ===&amp;gt;python C:\Users\Administ">
+<meta name="description" content="Django虚拟环境的搭建 1.知识了解C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python ​C:\Users\Adm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django环境搭建">
 <meta property="og:url" content="http://weixingdemeng.github.io/2019/01/04/环境搭建/index.html">
 <meta property="og:site_name" content="未醒的梦">
-<meta property="og:description" content="#Django虚拟环境的搭建 C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\; ===&amp;gt;python C:\Users\Administ">
+<meta property="og:description" content="Django虚拟环境的搭建 1.知识了解C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python ​C:\Users\Adm">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-04T03:51:45.143Z">
+<meta property="og:updated_time" content="2019-01-04T04:15:47.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django环境搭建">
-<meta name="twitter:description" content="#Django虚拟环境的搭建 C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\; ===&amp;gt;python C:\Users\Administ">
+<meta name="twitter:description" content="Django虚拟环境的搭建 1.知识了解C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python ​C:\Users\Adm">
 
 
 
@@ -374,32 +374,58 @@
       
 
       
-        <p>#Django虚拟环境的搭建</p>
-<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&gt; pip</p>
-<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;</p>
-<p>===&gt;python</p>
-<p>C:\Users\Administrator\AppData\Roaming\npm;c/windows/System32</p>
-<p>安装virtualenv</p>
-<p>pip install virtualenv</p>
-<p>输入virtualenv(-p指定虚拟环境python版本 -no-site-packages指定虚拟环境是纯净的,没有安装其他的库)</p>
-<p>创建环境</p>
-<p>到环境目录cd env virtualenv –no-site-packages -p python绝对路径(d:\python3\python.exe) 文件名</p>
-<p>“C:\Program Files\JetBrains\PyCharm Community Edition 2018.2.1\bin\pycharm64.exe”</p>
-<p>pip list 查看当前通过pip安装的内容</p>
-<p>pip install xxx安装</p>
-<p>激活环境</p>
-<p>windows:在scripts文件夹空输入activate</p>
-<p>Mac/Linux/Ubuntu:在bin文件夹输入source activate</p>
-<p>在虚拟环境里面创建django</p>
-<p>pip install django</p>
-<p>退出虚拟环境</p>
+        <h1 id="Django虚拟环境的搭建"><a href="#Django虚拟环境的搭建" class="headerlink" title="Django虚拟环境的搭建"></a>Django虚拟环境的搭建</h1><ul>
+<li><p>1.知识了解<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&gt; pip</p>
+<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&gt;python</p>
+<p>​C:\Users\Administrator\AppData\Roaming\npm;c/windows/System3</p>
+</li>
+<li><p>2.环境搭建</p>
+<p>1）安装virtualenv –&gt; pip install virtualenv</p>
+<p>​2）输入virtualenv(-p指定虚拟环境python版本 -no-site-packages指定虚  拟环境是纯净的,没有安装其他的库)</p>
+<p>​3）创建环境</p>
+<p>​到环境目录cd env </p>
+<p>​然后virtualenv –no-site-packages -p python绝对路径(d:\python3\python.exe) 文件名</p>
+<p>​”C:\Program Files\JetBrains\PyCharm Community Edition     2018.2.1\bin\pycharm64.exe”</p>
+<p>​4）</p>
+<p>​pip list 查看当前通过pip安装的内容</p>
+<p>​pip install xxx安装</p>
+</li>
+<li><p>3 激活环境</p>
+<p>1）windows:在scripts文件夹空输入activate</p>
+<p>2）Mac/Linux/Ubuntu:在bin文件夹输入source activate</p>
+<p>3）pip install django：安装依赖库</p>
+</li>
+<li><p>4 退出虚拟环境</p>
 <p>deactivate </p>
-<p>#创建django项目<br>cd 8.django<br>创建django项目<br>django-admin startproject day01<br>所有网站默认端口是80，一般都隐藏<br>启动python manege.py runserver(默认IP:127.0.0.1:8000)<br>修改启动端口: python manage.py runserver 端口<br>修改IP和端口：python mange.py runserver IP:端口<br>不能只修改IP<br>IP参数：如果为0.0.0.0表示任何人都可以通过公网访问django项目<br>端口PORT参数：如果端口设置为80，表示该端口可以不用写<br>os.path.abspath(<strong>file</strong>) - 当前文件的绝对路径<br>os.path.dirname(os.path.abspath(<strong>file</strong>))当前文件的上层路径<br>os.path.dirname(os.path.dirname(os.path.abspath(<strong>file</strong>)))-项目路径<br>python manage.py startapp app开始运用<br>django的设计模式1：<br>MVT:</p>
+</li>
+</ul>
+<p>#创建django项目</p>
+<ul>
+<li><p>创建django项目</p>
+<p>1)django-admin startproject day01<br>所有网站默认端口是80，一般都隐藏<br>2)启动python manege.py runserver(默认IP:127.0.0.1:8000)<br>修改启动端口: python manage.py runserver 端口<br>修改IP和端口：python mange.py runserver IP:端口<br>不能只修改IP<br>3)IP参数：如果为0.0.0.0表示任何人都可以通过公网访问django项目<br>端口PORT参数：如果端口设置为80，表示该端口可以不用写<br>4)python manage.py startapp app开始运用</p>
+</li>
+<li><p>django的设计模式1：</p>
+</li>
+</ul>
+<p>MVT:</p>
 <pre><code>M:models.py,模型层，定义模型和数据库中的表之间的关联关系， 对数据库进行操作
 V:viems.py,视图层，写业务逻辑的地方
 T:tempLates,模板，定义页面HTML的地方
-</code></pre><p>MVC:MVT模式是由MVC演变出来的<br>    MVC模式是所有框架遵循的模式。<br>    M；模型层<br>    v:模板，HTML页面<br>    C:controller,控制器，写业务逻辑的地方<br>用户 –&gt;c –&gt; m–&gt;–&gt;v–&gt;用户<br>用户 –&gt;v –&gt; m–&gt;–&gt;t–&gt;用户<br>settings.py中配置<br>-name<br>-user<br>-host<br>-port<br>-password<br>-engine<br>使用pymysql链接数据库：因为python3没有mysqldb驱动，无法直接连接mysql,<br>在工程目录的<strong>init</strong>.py文件中定义pymysql.install_as_MySQLdb()<br>迁移：python manage.py migrate 第一次迁移,将自带的表创建出来<br>python manage.py createsuperuser 插入超级管理员账号</p>
-<p>自定义模型：（第一次之后的迁移）<br>python manage.py makemigrations - 生成迁移文件<br>python manage.py migrate - 执行迁移文件</p>
+</code></pre><p>MVC:MVT模式是由MVC演变出来的<br>    MVC模式是所有框架遵循的模式。<br>    M；模型层<br>    v:模板，HTML页面<br>    C:controller,控制器，写业务逻辑的地方<br>用户 –&gt;c –&gt; m–&gt;–&gt;v–&gt;用户<br>用户 –&gt;v –&gt; m–&gt;–&gt;t–&gt;用户</p>
+<ul>
+<li><p>settings.py中配置</p>
+<p>-name<br>-user<br>-host<br>-port<br>-password<br>-engine<br>使用pymysql链接数据库：因为python3没有mysqldb驱动，无法直接连接mysql,在工程目录的<strong>init</strong>.py文件中定义pymysql.install_as_MySQLdb()</p>
+<pre><code>import pymysql
+pymysql.install_as_MySQLdb()
+</code></pre></li>
+<li><p>迁移：</p>
+<p>python manage.py migrate 第一次迁移,将自带的表创建出来</p>
+<p>python manage.py createsuperuser 插入超级管理员账号</p>
+</li>
+<li><p>自定义模型：（第一次之后的迁移）</p>
+<p>python manage.py makemigrations - 生成迁移文件<br>python manage.py migrate - 执行迁移文件</p>
+</li>
+</ul>
 
       
     </div>
@@ -424,8 +450,8 @@ T:tempLates,模板，定义页面HTML的地方
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/02/Tornado/" rel="next" title="Django">
-                <i class="fa fa-chevron-left"></i> Django
+              <a href="/2019/01/02/Nginx服务器安装/" rel="next" title="Nginx常用指令">
+                <i class="fa fa-chevron-left"></i> Nginx常用指令
               </a>
             
           </div>
@@ -484,8 +510,17 @@ T:tempLates,模板，定义页面HTML的地方
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -536,6 +571,22 @@ T:tempLates,模板，定义页面HTML的地方
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Django虚拟环境的搭建"><span class="nav-number">1.</span> <span class="nav-text">Django虚拟环境的搭建</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

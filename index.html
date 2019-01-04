@@ -378,32 +378,221 @@
       
         
           
-            <p>#Django虚拟环境的搭建</p>
-<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&gt; pip</p>
-<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;</p>
-<p>===&gt;python</p>
-<p>C:\Users\Administrator\AppData\Roaming\npm;c/windows/System32</p>
-<p>安装virtualenv</p>
-<p>pip install virtualenv</p>
-<p>输入virtualenv(-p指定虚拟环境python版本 -no-site-packages指定虚拟环境是纯净的,没有安装其他的库)</p>
-<p>创建环境</p>
-<p>到环境目录cd env virtualenv –no-site-packages -p python绝对路径(d:\python3\python.exe) 文件名</p>
-<p>“C:\Program Files\JetBrains\PyCharm Community Edition 2018.2.1\bin\pycharm64.exe”</p>
-<p>pip list 查看当前通过pip安装的内容</p>
-<p>pip install xxx安装</p>
-<p>激活环境</p>
-<p>windows:在scripts文件夹空输入activate</p>
-<p>Mac/Linux/Ubuntu:在bin文件夹输入source activate</p>
-<p>在虚拟环境里面创建django</p>
-<p>pip install django</p>
-<p>退出虚拟环境</p>
+            <h1 id="Django虚拟环境的搭建"><a href="#Django虚拟环境的搭建" class="headerlink" title="Django虚拟环境的搭建"></a>Django虚拟环境的搭建</h1><ul>
+<li><p>1.知识了解<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&gt; pip</p>
+<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&gt;python</p>
+<p>​C:\Users\Administrator\AppData\Roaming\npm;c/windows/System3</p>
+</li>
+<li><p>2.环境搭建</p>
+<p>1）安装virtualenv –&gt; pip install virtualenv</p>
+<p>​2）输入virtualenv(-p指定虚拟环境python版本 -no-site-packages指定虚  拟环境是纯净的,没有安装其他的库)</p>
+<p>​3）创建环境</p>
+<p>​到环境目录cd env </p>
+<p>​然后virtualenv –no-site-packages -p python绝对路径(d:\python3\python.exe) 文件名</p>
+<p>​”C:\Program Files\JetBrains\PyCharm Community Edition     2018.2.1\bin\pycharm64.exe”</p>
+<p>​4）</p>
+<p>​pip list 查看当前通过pip安装的内容</p>
+<p>​pip install xxx安装</p>
+</li>
+<li><p>3 激活环境</p>
+<p>1）windows:在scripts文件夹空输入activate</p>
+<p>2）Mac/Linux/Ubuntu:在bin文件夹输入source activate</p>
+<p>3）pip install django：安装依赖库</p>
+</li>
+<li><p>4 退出虚拟环境</p>
 <p>deactivate </p>
-<p>#创建django项目<br>cd 8.django<br>创建django项目<br>django-admin startproject day01<br>所有网站默认端口是80，一般都隐藏<br>启动python manege.py runserver(默认IP:127.0.0.1:8000)<br>修改启动端口: python manage.py runserver 端口<br>修改IP和端口：python mange.py runserver IP:端口<br>不能只修改IP<br>IP参数：如果为0.0.0.0表示任何人都可以通过公网访问django项目<br>端口PORT参数：如果端口设置为80，表示该端口可以不用写<br>os.path.abspath(<strong>file</strong>) - 当前文件的绝对路径<br>os.path.dirname(os.path.abspath(<strong>file</strong>))当前文件的上层路径<br>os.path.dirname(os.path.dirname(os.path.abspath(<strong>file</strong>)))-项目路径<br>python manage.py startapp app开始运用<br>django的设计模式1：<br>MVT:</p>
+</li>
+</ul>
+<p>#创建django项目</p>
+<ul>
+<li><p>创建django项目</p>
+<p>1)django-admin startproject day01<br>所有网站默认端口是80，一般都隐藏<br>2)启动python manege.py runserver(默认IP:127.0.0.1:8000)<br>修改启动端口: python manage.py runserver 端口<br>修改IP和端口：python mange.py runserver IP:端口<br>不能只修改IP<br>3)IP参数：如果为0.0.0.0表示任何人都可以通过公网访问django项目<br>端口PORT参数：如果端口设置为80，表示该端口可以不用写<br>4)python manage.py startapp app开始运用</p>
+</li>
+<li><p>django的设计模式1：</p>
+</li>
+</ul>
+<p>MVT:</p>
 <pre><code>M:models.py,模型层，定义模型和数据库中的表之间的关联关系， 对数据库进行操作
 V:viems.py,视图层，写业务逻辑的地方
 T:tempLates,模板，定义页面HTML的地方
-</code></pre><p>MVC:MVT模式是由MVC演变出来的<br>    MVC模式是所有框架遵循的模式。<br>    M；模型层<br>    v:模板，HTML页面<br>    C:controller,控制器，写业务逻辑的地方<br>用户 –&gt;c –&gt; m–&gt;–&gt;v–&gt;用户<br>用户 –&gt;v –&gt; m–&gt;–&gt;t–&gt;用户<br>settings.py中配置<br>-name<br>-user<br>-host<br>-port<br>-password<br>-engine<br>使用pymysql链接数据库：因为python3没有mysqldb驱动，无法直接连接mysql,<br>在工程目录的<strong>init</strong>.py文件中定义pymysql.install_as_MySQLdb()<br>迁移：python manage.py migrate 第一次迁移,将自带的表创建出来<br>python manage.py createsuperuser 插入超级管理员账号</p>
-<p>自定义模型：（第一次之后的迁移）<br>python manage.py makemigrations - 生成迁移文件<br>python manage.py migrate - 执行迁移文件</p>
+</code></pre><p>MVC:MVT模式是由MVC演变出来的<br>    MVC模式是所有框架遵循的模式。<br>    M；模型层<br>    v:模板，HTML页面<br>    C:controller,控制器，写业务逻辑的地方<br>用户 –&gt;c –&gt; m–&gt;–&gt;v–&gt;用户<br>用户 –&gt;v –&gt; m–&gt;–&gt;t–&gt;用户</p>
+<ul>
+<li><p>settings.py中配置</p>
+<p>-name<br>-user<br>-host<br>-port<br>-password<br>-engine<br>使用pymysql链接数据库：因为python3没有mysqldb驱动，无法直接连接mysql,在工程目录的<strong>init</strong>.py文件中定义pymysql.install_as_MySQLdb()</p>
+<pre><code>import pymysql
+pymysql.install_as_MySQLdb()
+</code></pre></li>
+<li><p>迁移：</p>
+<p>python manage.py migrate 第一次迁移,将自带的表创建出来</p>
+<p>python manage.py createsuperuser 插入超级管理员账号</p>
+</li>
+<li><p>自定义模型：（第一次之后的迁移）</p>
+<p>python manage.py makemigrations - 生成迁移文件<br>python manage.py migrate - 执行迁移文件</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://weixingdemeng.github.io/2019/01/02/Nginx服务器安装/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="未醒的梦">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未醒的梦">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/02/Nginx服务器安装/" itemprop="url">Nginx常用指令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-02T21:08:22+08:00">
+                2019-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/指令/" itemprop="url" rel="index">
+                    <span itemprop="name">指令</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/指令/Nginx常用指令/" itemprop="url" rel="index">
+                    <span itemprop="name">Nginx常用指令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口<br><img src="/images/aliyun/aliyun0.png" alt=""><br><img src="/images/aliyun/aliyun2.png" alt=""><br><img src="/images/aliyun/aliyun3.png" alt=""><br><img src="/images/aliyun/aliyun4.png" alt=""></p>
+<h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br></pre></td></tr></table></figure></p>
+<p>b) 安装nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx</span><br></pre></td></tr></table></figure></p>
+<p>c) 运行nginx<br>Nginx不会自行启动。要运行Nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx</span><br></pre></td></tr></table></figure></p>
+<p>nginx的运行命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl status nginx 查看nginx的状态  </span><br><span class="line">systemctl start/stop/enable/disable nginx</span><br></pre></td></tr></table></figure></p>
+<p>d)系统启动时启动Nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx</span><br></pre></td></tr></table></figure></p>
+<p>e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=http </span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=https</span><br><span class="line">sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-nginx目录共享配置"><a href="#3-nginx目录共享配置" class="headerlink" title="3.nginx目录共享配置"></a>3.nginx目录共享配置</h3><p>a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting<br>b) 打开 etc/nginx/nginx.conf 文件，设置server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表</span><br><span class="line">	root /home/yuting;</span><br><span class="line">	location / &#123;</span><br><span class="line">	       autoindex on;</span><br><span class="line">	       autoindex_exact_size on; </span><br><span class="line">    	   autoindex_localtime on;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>除了可以共享文件，还可以自定义页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">自定义服务器页面</span><br><span class="line">	location / &#123;</span><br><span class="line">			root /home/yuting;</span><br><span class="line">			index index.html index.htm;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意： 如果出现权限问题，可以修改目录的权限  </p>
+<h1 id="ssh密钥认证"><a href="#ssh密钥认证" class="headerlink" title="ssh密钥认证"></a>ssh密钥认证</h1><p>1.在主机和从机上执行：<code>ssh-keygen</code><br>2.在从机上执行:  <code>scp  id_rsa.pub  root@主机地址:~/.ssh/master.pub</code><br>(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)<br>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code><br>4.修改文件authorized_keys的权限: <code>chmod 600  authorized_keys</code><br>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt;  authorized_keys</code><br>6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中</p>
 
           
         
@@ -558,183 +747,6 @@ T:tempLates,模板，定义页面HTML的地方
           
             <h1 id="Django-Flask-Tornado"><a href="#Django-Flask-Tornado" class="headerlink" title="Django / Flask/Tornado"></a>Django / Flask/Tornado</h1><p>安装<br>pip check - 检查是否冲突<br>pip freeze - 检查依赖库版本<br>pip install<br>pip install django==1.11 - 更换版本<br>python -m pip install -U pip – 更新pip</p>
 <p>1.通过PyCharm创建项目 –&gt; hellodjango<br>2..在Terminal的虚拟环境中安装依赖项 –&gt;  install django pymysql django-redis djangorestframework pillow<br>pip check - 重建依赖库<br>pip freeze &gt; requirements.txt - 依赖库导出<br>3.创建Django项目 –&gt;django-admin startproject hellodjango . – 点表示当前路径<br>4.运行项目 –&gt; python manage.py runserver - 启动服务器<br><a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a><br><a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a><br>python manage.py runserver 0.0.0.0:8000<br>5.修改配置文件 –&gt; hellodjango/settings.py<br>LANGUAGE_CODE = ‘zh-hans’ - 语言设置<br>TIME_ZONE = ‘Asia/Chongqing’ - 时区设置<br>DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>        ‘NAME’: ‘HRS’,<br>        ‘HOST’: ‘47.112.10.147’,<br>        ‘PORT’: 3306,<br>        ‘USER’: ‘root’,<br>        ‘PASSWORD’: ‘123456’,<br>        ‘TIME_ZONE’: ‘Asia/Chongqing’<br>    }<br>}<br>6.修改<strong>init</strong>.py文件 –&gt;<br>import pymysql<br>pymysql.install_as_MySQLdb()<br>7.生成Django自带的数据表<br>python manage.py migrate - 在数据库增加10个表格<br>8.创建后台管理账号<br>python manage.py createsuperuser</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://weixingdemeng.github.io/2018/12/22/Nginx服务器安装/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="未醒的梦">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未醒的梦">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/22/Nginx服务器安装/" itemprop="url">Nginx常用指令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-22T00:00:00+08:00">
-                2018-12-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/指令/" itemprop="url" rel="index">
-                    <span itemprop="name">指令</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/指令/Nginx常用指令/" itemprop="url" rel="index">
-                    <span itemprop="name">Nginx常用指令</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
-<p><img src="/images/aliyun/aliyun0.png" alt=""><br><img src="/images/aliyun/aliyun2.png" alt=""><br><img src="/images/aliyun/aliyun3.png" alt=""><br><img src="/images/aliyun/aliyun4.png" alt=""></p>
-<h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br></pre></td></tr></table></figure>
-<p>b) 安装nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
-<p>c) 运行nginx<br>Nginx不会自行启动。要运行Nginx  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx</span><br></pre></td></tr></table></figure>
-<p>nginx的运行命令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl status nginx 查看nginx的状态  </span><br><span class="line">systemctl start/stop/enable/disable nginx</span><br></pre></td></tr></table></figure>
-<p>d)系统启动时启动Nginx  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx</span><br></pre></td></tr></table></figure>
-<p>e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=http </span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=https</span><br><span class="line">sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<h3 id="3-nginx目录共享配置"><a href="#3-nginx目录共享配置" class="headerlink" title="3.nginx目录共享配置"></a>3.nginx目录共享配置</h3><p>a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting<br>b) 打开 etc/nginx/nginx.conf 文件，设置server</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表</span><br><span class="line">	root /home/yuting;</span><br><span class="line">	location / &#123;</span><br><span class="line">	       autoindex on;</span><br><span class="line">	       autoindex_exact_size on; </span><br><span class="line">    	   autoindex_localtime on;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>除了可以共享文件，还可以自定义页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">自定义服务器页面</span><br><span class="line">	location / &#123;</span><br><span class="line">			root /home/yuting;</span><br><span class="line">			index index.html index.htm;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>注意： 如果出现权限问题，可以修改目录的权限  </p>
-<h1 id="ssh密钥认证"><a href="#ssh密钥认证" class="headerlink" title="ssh密钥认证"></a>ssh密钥认证</h1><p>1.在主机和从机上执行：<code>ssh-keygen</code></p>
-<p>2.在从机上执行:  <code>scp  id_rsa.pub  root@主机地址:~/.ssh/master.pub</code><br>(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)</p>
-<p>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code> </p>
-<p>4.修改文件authorized_keys的权限: <code>chmod 600  authorized_keys</code>  </p>
-<p>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt;  authorized_keys</code></p>
-<p>6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中</p>
 
           
         
