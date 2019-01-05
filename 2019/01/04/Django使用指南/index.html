@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Django简介：Django官网地址 Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式， MVC模式强制性的使应用程序的输入，处理和输出分开核心思想：解耦M：数据存取层，模型对象 - 负责在数据库中存取数据V：表现层，负责数据的显示和呈现C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作) Django的模">
+<meta name="description" content="Django简介：Django官网地址  Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式， MVC模式强制性的使应用程序的输入，处理和输出分开核心思想：解耦M：数据存取层，模型对象 - 负责在数据库中存取数据V：表现层，负责数据的显示和呈现C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作) Django的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django使用指南">
 <meta property="og:url" content="http://weixingdemeng.github.io/2019/01/04/Django使用指南/index.html">
 <meta property="og:site_name" content="未醒的梦">
-<meta property="og:description" content="Django简介：Django官网地址 Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式， MVC模式强制性的使应用程序的输入，处理和输出分开核心思想：解耦M：数据存取层，模型对象 - 负责在数据库中存取数据V：表现层，负责数据的显示和呈现C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作) Django的模">
+<meta property="og:description" content="Django简介：Django官网地址  Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式， MVC模式强制性的使应用程序的输入，处理和输出分开核心思想：解耦M：数据存取层，模型对象 - 负责在数据库中存取数据V：表现层，负责数据的显示和呈现C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作) Django的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-05T01:31:47.254Z">
+<meta property="og:updated_time" content="2019-01-05T01:37:49.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django使用指南">
-<meta name="twitter:description" content="Django简介：Django官网地址 Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式， MVC模式强制性的使应用程序的输入，处理和输出分开核心思想：解耦M：数据存取层，模型对象 - 负责在数据库中存取数据V：表现层，负责数据的显示和呈现C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作) Django的模">
+<meta name="twitter:description" content="Django简介：Django官网地址  Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式， MVC模式强制性的使应用程序的输入，处理和输出分开核心思想：解耦M：数据存取层，模型对象 - 负责在数据库中存取数据V：表现层，负责数据的显示和呈现C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作) Django的">
 
 
 
@@ -374,7 +374,7 @@
       
 
       
-        <h3 id="Django简介："><a href="#Django简介：" class="headerlink" title="Django简介："></a>Django简介：</h3><p><a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django官网地址</a></p>
+        <h3 id="Django简介："><a href="#Django简介：" class="headerlink" title="Django简介："></a>Django简介：</h3><p><font style="color:red"><a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django官网地址</a> <font></font></font></p>
 <p>Django是一个用Python编写的开放源代码的Web应用框架，系统采用的MVC模式，</p>
 <h3 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h3><p>强制性的使应用程序的输入，处理和输出分开<br>核心思想：解耦<br>M：数据存取层，模型对象 - 负责在数据库中存取数据<br>V：表现层，负责数据的显示和呈现<br>C:业务逻辑层 - 负责从用户端收集用户的输入，进行逻辑处理(例如：向模型中发送数据，进行crud操作)</p>
 <h3 id="Django的模式简介"><a href="#Django的模式简介" class="headerlink" title="Django的模式简介"></a>Django的模式简介</h3><h6 id="MVT模式"><a href="#MVT模式" class="headerlink" title="MVT模式"></a>MVT模式</h6><p>严格来说，Django的模式应该是MVT模式，本质上和MVC没什么区别，也是各组件之间为了保持松耦合关系，只是定义上有些许不同。<br>Model： 负责业务与数据库(ORM)的对象<br>View： 负责业务逻辑并适当调用Model和Template<br>Template: 负责把页面渲染展示给用户<br>注意： Django中还有一个url分发器，也叫作路由。主要用于将url请求发送给不同的View处理，View在进行相关的业务逻辑处理</p>
