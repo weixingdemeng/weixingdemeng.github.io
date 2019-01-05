@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Django虚拟环境的搭建 1.知识了解C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python ​C:\Users\Adm">
+<meta name="description" content="1.知识了解  C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip   C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python   ​C:\Users\Administrat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django环境搭建">
+<meta property="og:title" content="Django虚拟环境搭建">
 <meta property="og:url" content="http://weixingdemeng.github.io/2019/01/04/环境搭建/index.html">
 <meta property="og:site_name" content="未醒的梦">
-<meta property="og:description" content="Django虚拟环境的搭建 1.知识了解C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python ​C:\Users\Adm">
+<meta property="og:description" content="1.知识了解  C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip   C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python   ​C:\Users\Administrat">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-04T04:15:47.368Z">
+<meta property="og:updated_time" content="2019-01-05T01:53:29.976Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django环境搭建">
-<meta name="twitter:description" content="Django虚拟环境的搭建 1.知识了解C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python ​C:\Users\Adm">
+<meta name="twitter:title" content="Django虚拟环境搭建">
+<meta name="twitter:description" content="1.知识了解  C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&amp;gt; pip   C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&amp;gt;python   ​C:\Users\Administrat">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>Django环境搭建 | 未醒的梦</title>
+  <title>Django虚拟环境搭建 | 未醒的梦</title>
   
 
 
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Django环境搭建</h1>
+          <h1 class="post-title" itemprop="name headline">Django虚拟环境搭建</h1>
         
 
         <div class="post-meta">
@@ -374,58 +374,30 @@
       
 
       
-        <h1 id="Django虚拟环境的搭建"><a href="#Django虚拟环境的搭建" class="headerlink" title="Django虚拟环境的搭建"></a>Django虚拟环境的搭建</h1><ul>
-<li><p>1.知识了解<br>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&gt; pip</p>
-<p>C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&gt;python</p>
-<p>​C:\Users\Administrator\AppData\Roaming\npm;c/windows/System3</p>
-</li>
-<li><p>2.环境搭建</p>
-<p>1）安装virtualenv –&gt; pip install virtualenv</p>
-<p>​2）输入virtualenv(-p指定虚拟环境python版本 -no-site-packages指定虚  拟环境是纯净的,没有安装其他的库)</p>
-<p>​3）创建环境</p>
-<p>​到环境目录cd env </p>
-<p>​然后virtualenv –no-site-packages -p python绝对路径(d:\python3\python.exe) 文件名</p>
-<p>​”C:\Program Files\JetBrains\PyCharm Community Edition     2018.2.1\bin\pycharm64.exe”</p>
-<p>​4）</p>
-<p>​pip list 查看当前通过pip安装的内容</p>
-<p>​pip install xxx安装</p>
-</li>
-<li><p>3 激活环境</p>
-<p>1）windows:在scripts文件夹空输入activate</p>
-<p>2）Mac/Linux/Ubuntu:在bin文件夹输入source activate</p>
-<p>3）pip install django：安装依赖库</p>
-</li>
-<li><p>4 退出虚拟环境</p>
-<p>deactivate </p>
-</li>
-</ul>
-<p>#创建django项目</p>
-<ul>
-<li><p>创建django项目</p>
-<p>1)django-admin startproject day01<br>所有网站默认端口是80，一般都隐藏<br>2)启动python manege.py runserver(默认IP:127.0.0.1:8000)<br>修改启动端口: python manage.py runserver 端口<br>修改IP和端口：python mange.py runserver IP:端口<br>不能只修改IP<br>3)IP参数：如果为0.0.0.0表示任何人都可以通过公网访问django项目<br>端口PORT参数：如果端口设置为80，表示该端口可以不用写<br>4)python manage.py startapp app开始运用</p>
-</li>
-<li><p>django的设计模式1：</p>
-</li>
-</ul>
-<p>MVT:</p>
-<pre><code>M:models.py,模型层，定义模型和数据库中的表之间的关联关系， 对数据库进行操作
-V:viems.py,视图层，写业务逻辑的地方
-T:tempLates,模板，定义页面HTML的地方
-</code></pre><p>MVC:MVT模式是由MVC演变出来的<br>    MVC模式是所有框架遵循的模式。<br>    M；模型层<br>    v:模板，HTML页面<br>    C:controller,控制器，写业务逻辑的地方<br>用户 –&gt;c –&gt; m–&gt;–&gt;v–&gt;用户<br>用户 –&gt;v –&gt; m–&gt;–&gt;t–&gt;用户</p>
-<ul>
-<li><p>settings.py中配置</p>
-<p>-name<br>-user<br>-host<br>-port<br>-password<br>-engine<br>使用pymysql链接数据库：因为python3没有mysqldb驱动，无法直接连接mysql,在工程目录的<strong>init</strong>.py文件中定义pymysql.install_as_MySQLdb()</p>
+        <h3 id="1-知识了解"><a href="#1-知识了解" class="headerlink" title="1.知识了解"></a>1.知识了解</h3><p>  C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\; ===&gt; pip</p>
+<p>  C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;===&gt;python</p>
+<p>  ​C:\Users\Administrator\AppData\Roaming\npm;c/windows/System3</p>
+<h3 id="2-环境搭建"><a href="#2-环境搭建" class="headerlink" title="2.环境搭建"></a>2.环境搭建</h3><p>  1）安装virtualenv –&gt; pip install virtualenv</p>
+<p>  ​2）输入virtualenv(-p指定虚拟环境python版本 -no-site-packages指定虚  拟环境是纯净的,没有安装其他的库)</p>
+<p>  ​3）创建环境</p>
+<p>  ​到环境目录cd env </p>
+<p>  ​然后virtualenv –no-site-packages -p python绝对路径(d:\python3\python.exe) 文件名</p>
+<p>  ​”C:\Program Files\JetBrains\PyCharm Community Edition     2018.2.1\bin\pycharm64.exe”</p>
+<p>  ​4）</p>
+<p>  ​pip list 查看当前通过pip安装的内容</p>
+<p>  ​pip install xxx安装</p>
+<h3 id="3-激活环境"><a href="#3-激活环境" class="headerlink" title="3 激活环境"></a>3 激活环境</h3><p>  1）windows:在scripts文件夹空输入activate</p>
+<p>  2）Mac/Linux/Ubuntu:在bin文件夹输入source activate</p>
+<p>  3）pip install django：安装依赖库</p>
+<h3 id="4-退出虚拟环境"><a href="#4-退出虚拟环境" class="headerlink" title="4 退出虚拟环境"></a>4 退出虚拟环境</h3><p>  deactivate </p>
+<h1 id="创建django项目"><a href="#创建django项目" class="headerlink" title="创建django项目"></a>创建django项目</h1><h3 id="创建django项目-1"><a href="#创建django项目-1" class="headerlink" title="创建django项目"></a>创建django项目</h3><p>  1)django-admin startproject day01<br>  所有网站默认端口是80，一般都隐藏<br>  2)启动python manege.py runserver(默认IP:127.0.0.1:8000)<br>  修改启动端口: python manage.py runserver 端口<br>  修改IP和端口：python mange.py runserver IP:端口<br>  不能只修改IP<br>  3)IP参数：如果为0.0.0.0表示任何人都可以通过公网访问django项目<br>  端口PORT参数：如果端口设置为80，表示该端口可以不用写<br>  4)python manage.py startapp app开始运用</p>
+<h3 id="django的设计模式1："><a href="#django的设计模式1：" class="headerlink" title="django的设计模式1："></a>django的设计模式1：</h3><p>MVT:<br>    M:models.py,模型层，定义模型和数据库中的表之间的关联关系， 对数据库进行操作<br>    V:viems.py,视图层，写业务逻辑的地方<br>    T:tempLates,模板，定义页面HTML的地方<br>MVC:MVT模式是由MVC演变出来的<br>    MVC模式是所有框架遵循的模式。<br>    M；模型层<br>    v:模板，HTML页面<br>    C:controller,控制器，写业务逻辑的地方<br>用户 –&gt;c –&gt; m–&gt;–&gt;v–&gt;用户<br>用户 –&gt;v –&gt; m–&gt;–&gt;t–&gt;用户</p>
+<h3 id="settings-py中配置"><a href="#settings-py中配置" class="headerlink" title="settings.py中配置"></a>settings.py中配置</h3><p>  -name<br>  -user<br>  -host<br>  -port<br>  -password<br>  -engine<br>  使用pymysql链接数据库：因为python3没有mysqldb驱动，无法直接连接mysql,在工程目录的<strong>init</strong>.py文件中定义pymysql.install_as_MySQLdb()</p>
 <pre><code>import pymysql
 pymysql.install_as_MySQLdb()
-</code></pre></li>
-<li><p>迁移：</p>
-<p>python manage.py migrate 第一次迁移,将自带的表创建出来</p>
-<p>python manage.py createsuperuser 插入超级管理员账号</p>
-</li>
-<li><p>自定义模型：（第一次之后的迁移）</p>
-<p>python manage.py makemigrations - 生成迁移文件<br>python manage.py migrate - 执行迁移文件</p>
-</li>
-</ul>
+</code></pre><h3 id="迁移："><a href="#迁移：" class="headerlink" title="迁移："></a>迁移：</h3><p>  python manage.py migrate 第一次迁移,将自带的表创建出来</p>
+<p>  python manage.py createsuperuser 插入超级管理员账号</p>
+<h3 id="自定义模型：（第一次之后的迁移）"><a href="#自定义模型：（第一次之后的迁移）" class="headerlink" title="自定义模型：（第一次之后的迁移）"></a>自定义模型：（第一次之后的迁移）</h3><p>  python manage.py makemigrations - 生成迁移文件<br>  python manage.py migrate - 执行迁移文件</p>
 
       
     </div>
@@ -546,15 +518,6 @@ pymysql.install_as_MySQLdb()
             
 
             
-              
-              
-              <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
-                
-              </div>
-            
 
             
 
@@ -673,7 +636,7 @@ pymysql.install_as_MySQLdb()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Django虚拟环境的搭建"><span class="nav-number">1.</span> <span class="nav-text">Django虚拟环境的搭建</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-知识了解"><span class="nav-number">1.</span> <span class="nav-text">1.知识了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-环境搭建"><span class="nav-number">2.</span> <span class="nav-text">2.环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-激活环境"><span class="nav-number">3.</span> <span class="nav-text">3 激活环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-退出虚拟环境"><span class="nav-number">4.</span> <span class="nav-text">4 退出虚拟环境</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#创建django项目"><span class="nav-number"></span> <span class="nav-text">创建django项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建django项目-1"><span class="nav-number">1.</span> <span class="nav-text">创建django项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#django的设计模式1："><span class="nav-number">2.</span> <span class="nav-text">django的设计模式1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#settings-py中配置"><span class="nav-number">3.</span> <span class="nav-text">settings.py中配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迁移："><span class="nav-number">4.</span> <span class="nav-text">迁移：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义模型：（第一次之后的迁移）"><span class="nav-number">5.</span> <span class="nav-text">自定义模型：（第一次之后的迁移）</span></a></li></ol></li></div>
             
 
           </div>
